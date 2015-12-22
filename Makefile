@@ -10,5 +10,8 @@ bin/boot.o: src/boot.s
 bin/kernel.o: src/kernel.c
 	i686-elf-gcc -c src/kernel.c -o bin/kernel.o -std=gnu99 -ffreestanding -O2 -Wall -Wextra
 
+
 clean:
-	rm *.o *.bin
+	rm -f bin/*.o
+	rm -f bin/*.bin
+	rm -f bin/*.iso 
